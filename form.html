@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <title>Personal Information</title>
+    <script>
+        function validate()
+        {
+          var a,b,c,d,e;
+          a=f.t1.value;
+          b=f.t2.value;
+          c=f.t3.value;
+          d=f.t4.value;
+          e=document.getElementsByName("quan");
+          document.getElementById("msg").innerHTML="";
+          if(a=="")
+          document.getElementById("msg").innerHTML +="<br>*Please Enter the name";
+          if(b=="")
+          document.getElementById("msg").innerHTML +="<br>*Please Enter the Email";
+          if(c=="")
+          document.getElementById("msg").innerHTML +="<br>*Please Enter the Phone Number";
+          if(d=="")
+          document.getElementById("msg").innerHTML +="<br>*Please Enter the Address";
+          else
+          document.location.href="thanks.html"
+        }
+    </script>
+</head>
+<body >
+    <h1 align="center"><i>Personal Information</i></h1>
+    <form name="f">
+    <table align="center">
+    <tr>
+        <td>
+            Full Name:
+        </td>
+        <td>
+            <input type="text" name="t1"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email:
+        </td>
+        <td>
+            <input type="text" name="t2"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Phone Number:
+        </td>
+        <td>
+            <input type="text" name="t3"/>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Address:
+        </td>
+        <td>
+            <textarea name="t4" rows="10" cols="25"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Quantity:
+        </td>
+        <td>
+            <input type="radio" name="quan">1</input>
+            <input type="radio" name="quan">2</input>
+            <input type="radio" name="quan">3</input>
+            <input type="radio" name="quan">4</input>
+        </td>
+    </tr>
+    <tr align="center">
+        <td colspan="2">
+        <input type="button" value="Place Order" onclick="validate()"/></td>
+    </tr>
+    <tr>
+        <td>
+            <span id="msg"> </span>
+        </td>
+    </tr>
+    </table>
+    </form>
+</body>
